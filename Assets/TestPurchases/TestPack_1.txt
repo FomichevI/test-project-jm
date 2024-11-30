@@ -1,0 +1,7 @@
+{"HeaderText":"Ресурсы для постройки",
+"DescriptionText":"Покори небеса, построй плот своей мечты",
+"Items":[{"ItemId":"wood_1","Count":40},{"ItemId":"wood_1","Count":40},{"ItemId":"wood_1","Count":40},{"ItemId":"wood_2","Count":20},{"ItemId":"wood_2","Count":20}],
+"Currency":"$",
+"FullPrice":3.33,
+"DiscountedPrice":2.99,
+"IconId":"woodPack"}

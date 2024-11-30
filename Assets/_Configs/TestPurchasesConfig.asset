@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2c3cf6d212dc954584036c252c65f05, type: 3}
+  m_Name: TestPurchasesConfig
+  m_EditorClassIdentifier: 
+  _items:
+  - _id: wood_1
+    _sprite: {fileID: 21300000, guid: 65c59ccc59b5690458cb9e5324edc5dc, type: 3}
+  - _id: wood_2
+    _sprite: {fileID: 21300000, guid: aa8016ffea155e94aa7ed0534e64d67b, type: 3}
+  - _id: stone_1
+    _sprite: {fileID: 21300000, guid: 583675a75bcb2a941ac555b9ccd513a9, type: 3}
+  - _id: stone_2
+    _sprite: {fileID: 21300000, guid: 3edca54f1857b8e4ba720871e4d0f151, type: 3}
+  - _id: silver
+    _sprite: {fileID: 21300000, guid: 401e0dc6359ba784fbe939a1148487cf, type: 3}
+  - _id: gold
+    _sprite: {fileID: 21300000, guid: 93b5b28db06f8d2439c780ec3aeb28d2, type: 3}
+  - _id: bone
+    _sprite: {fileID: 21300000, guid: b45939f11371c524684402713923fe54, type: 3}
+  - _id: steel
+    _sprite: {fileID: 21300000, guid: e78313c7d47aeb845aee79d5bc8d26c5, type: 3}
+  - _id: woodPack
+    _sprite: {fileID: 21300000, guid: 63af52b5b92b10c4594f1085a1a0ab94, type: 3}

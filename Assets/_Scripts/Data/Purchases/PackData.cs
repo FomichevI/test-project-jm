@@ -20,7 +20,7 @@ public class PackData
     private float _discountedPrice;
     private string _iconId;
 
-    public void SetParameters(PackDataAdapter dataAdapter)
+    public PackData(PackDataAdapter dataAdapter)
     {
         _headerText = dataAdapter.HeaderText;
         _descriptionText = dataAdapter.DescriptionText;

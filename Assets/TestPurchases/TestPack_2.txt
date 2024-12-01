@@ -1,0 +1,7 @@
+{"HeaderText":"Набор начинающего строителя",
+"DescriptionText":"Поможет установить на плот все необходимые постройки",
+"Items":[{"ItemId":"wood_2","Count":20},{"ItemId":"wood_1","Count":40},{"ItemId":"stone_1","Count":20},{"ItemId":"stone_2","Count":20},{"ItemId":"steel","Count":20},{"ItemId":"bone","Count":20}],
+"Currency":"$",
+"FullPrice":6.00,
+"DiscountedPrice":3.99,
+"IconId":"adventurePack"}

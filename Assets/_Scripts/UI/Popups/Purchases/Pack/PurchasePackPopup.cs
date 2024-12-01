@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(PurchasePackView))]
@@ -50,7 +48,9 @@ public class PurchasePackPopup : MonoBehaviour
 
     private void OnByeButtonClick()
     {
+        Debug.Log("Pack " + _model.PackId + "  in the amount of " + _model.PurchaseCount + " was successfully purchased!");
         Hide();
+        PopupsController.Instance.ShowChoosePackPopup();
     }
 
     private void OnCountIncreaseButtonClick()
@@ -68,5 +68,6 @@ public class PurchasePackPopup : MonoBehaviour
     private void OnCloseButtonClick()
     {
         Hide();
+        PopupsController.Instance.ShowChoosePackPopup();
     }
 }

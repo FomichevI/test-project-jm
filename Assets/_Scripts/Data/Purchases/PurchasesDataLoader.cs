@@ -1,16 +1,14 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
+//  ласс, отвечающий за загрузку данных о покупке.
 // Ќужно учитывать, что в будущем структура усложнитс€ и данный класс, скорее всего, не нужно будет наследовать от MonoBehaviour
 // ѕока что это сделано дл€ упрощени€ 
 // “ак же в будущем этот класс будет запрашивать информацию о цене покупки и возвращать ее
 
-public class PurchasesData : MonoBehaviour
+public class PurchasesDataLoader : MonoBehaviour
 {
-    public static PurchasesData Instance;
+    public static PurchasesDataLoader Instance;
     public PurchasesConfig Config { get { return _config; } }
 
     [SerializeField] private PurchasesConfig _config;

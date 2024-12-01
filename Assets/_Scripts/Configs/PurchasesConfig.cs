@@ -1,8 +1,7 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+// Конфигурация покупок внутри приложения Unity. На данный момент содержит только связи между иконкой айтема и его id
 [CreateAssetMenu(fileName = "PurchasesConfig", menuName = "ScriptableObjects/PurchasesConfig", order = 1)]
 public class PurchasesConfig : ScriptableObject
 {

@@ -1,9 +1,6 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using static UnityEditor.Progress;
 
+// Класс, хранящий в себе данные набора для покупки. По сути, реализация получаемых Json данных в удобной форме.
 // В будущем цену и валюту покупки будем брать извне по id покупки
 public class PackData
 {
@@ -55,6 +52,8 @@ public class PackItem
     }
 }
 
+// Классы PackDataAdapter и PackItemAdapter необходимы только для конвертации из Json в класс PackData
+// Возможно найти более оптимальное решение, но для этого нужно больше времени. В рамках данного тесторого задания считаю данное решение подходящим.
 public class PackDataAdapter
 {
     public string HeaderText;

@@ -1,6 +1,4 @@
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -30,6 +28,7 @@ public class PurchasePackView : SimplePopupView
     [SerializeField] private RosouceItem _itemPrefab;
 
     private PurchasePackModel _model;
+    // Поле _currentRows необходимо для удобной очистки всех объектов RosouceItem после закрытия окна
     private List<GameObject> _currentRows = new List<GameObject>();
 
     public override void Show()
@@ -74,7 +73,7 @@ public class PurchasePackView : SimplePopupView
         _headerTmp.text = _model.PackData.HeaderText;
         _descriptionTmp.text = _model.PackData.DescriptionText;
         CreateItems();
-        _mainIconImg.sprite = PurchasesData.Instance.Config.GetSpriteById(_model.PackData.IconId);
+        _mainIconImg.sprite = PurchasesDataLoader.Instance.Config.GetSpriteById(_model.PackData.IconId);
         _countTmp.text = _model.PurchaseCount.ToString();
         SetPrice();
     }
@@ -89,7 +88,7 @@ public class PurchasePackView : SimplePopupView
         for (int i = 0; i < 3; i++)
         {
             RosouceItem item = Instantiate(_itemPrefab, currentRowTrans);
-            Sprite icon = PurchasesData.Instance.Config.GetSpriteById(_model.PackData.Items[i].ItemId);
+            Sprite icon = PurchasesDataLoader.Instance.Config.GetSpriteById(_model.PackData.Items[i].ItemId);
             item.SetVisual(icon, _model.PackData.Items[i].Count);
         }
 
@@ -100,7 +99,7 @@ public class PurchasePackView : SimplePopupView
             for (int i = 3; i < _model.PackData.Items.Length; i++)
             {
                 RosouceItem item = Instantiate(_itemPrefab, currentRowTrans);
-                Sprite icon = PurchasesData.Instance.Config.GetSpriteById(_model.PackData.Items[i].ItemId);
+                Sprite icon = PurchasesDataLoader.Instance.Config.GetSpriteById(_model.PackData.Items[i].ItemId);
                 item.SetVisual(icon, _model.PackData.Items[i].Count);
             }
         }

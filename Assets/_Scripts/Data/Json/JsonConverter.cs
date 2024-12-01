@@ -1,7 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+//  ласс, отвечающий за конвертацию данных в виде Json строки в экземпл€р необходимого нам класса.
 public static class JsonConverter
 {
     public static PackData ConvertToPackData(string packDataString)

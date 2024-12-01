@@ -1,9 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+// Класс, отвечающий за отображение одного айтема на UI (пока что используется только в окне покупок)
 public class RosouceItem : MonoBehaviour
 {
     [SerializeField] private Image _iconImg;

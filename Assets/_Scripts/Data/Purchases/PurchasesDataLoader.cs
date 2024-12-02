@@ -4,7 +4,6 @@ using UnityEngine;
 //  ласс, отвечающий за загрузку данных о покупке.
 // Ќужно учитывать, что в будущем структура усложнитс€ и данный класс, скорее всего, не нужно будет наследовать от MonoBehaviour
 // ѕока что это сделано дл€ упрощени€ 
-// “ак же в будущем этот класс будет запрашивать информацию о цене покупки и возвращать ее
 
 public class PurchasesDataLoader : MonoBehaviour
 {
@@ -14,6 +13,20 @@ public class PurchasesDataLoader : MonoBehaviour
     [SerializeField] private PurchasesConfig _config;
 
     private string _path;
+
+    public bool HasPurchaseData(string purchaseId)
+    {
+        string fullPath = _path + purchaseId + ".txt";
+        if (File.Exists(fullPath))
+        {
+            return true;
+        }
+        else
+        {
+            Debug.LogError("File " + fullPath + " is not found");
+            return false;
+        }
+    }
 
     public string GetPurchaseDataString(string purchaseId)
     {
@@ -26,7 +39,7 @@ public class PurchasesDataLoader : MonoBehaviour
         }
         else
         {
-            Debug.LogError("File " + fullPath + " is not found");
+            Debug.LogError("File " + fullPath + " is not found. Call HasPurchaseData(string purchaseId) before GetPurchaseDataString(string purchaseId).");
             return null;
         }
     }
@@ -35,6 +48,10 @@ public class PurchasesDataLoader : MonoBehaviour
     {
         if (Instance == null)
             Instance = this;
-        _path = Application.dataPath + "/TestPurchases/";
+    }
+
+    private void Start()
+    {
+        _path = LocalDataPathes.Instance.GetPurchasesFolder();
     }
 }
